@@ -15,7 +15,6 @@ int main ()  {
     omp_set_num_threads(2);
 
     //Parallel region with the number of threads
-    //Each threads have own copy of variable
     #pragma omp parallel private(tid)                          
     {
         tid = omp_get_thread_num(); //ID of thread
